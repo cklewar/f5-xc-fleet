@@ -24,8 +24,8 @@ module "fleet" {
   source                       = "./modules/f5xc/fleet"
   f5xc_fleet_name              = format("%s-fleet-%s", var.project_prefix, var.project_suffix)
   f5xc_fleet_label             = format("%s-fleet-%s", var.project_prefix, var.project_suffix)
-  f5xc_outside_virtual_network = [format("%s-vn-%s", var.project_prefix, var.project_suffix)]
-  f5xc_inside_virtual_network  = format("%s-vn-%s", var.project_prefix, var.project_suffix)
+  f5xc_outside_virtual_network = [format("%s-vn-outside-%s", var.project_prefix, var.project_suffix)]
+  f5xc_inside_virtual_network  = [format("%s-vn-inside-%s", var.project_prefix, var.project_suffix)]
   f5xc_networks_interface_list = [format("%s-fleet-interface-%s", var.project_prefix, var.project_suffix)]
   f5xc_namespace               = "system"
   f5xc_tenant                  = var.f5xc_tenant
