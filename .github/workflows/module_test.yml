@@ -1,5 +1,5 @@
 name: F5XC fleet module
-on: push
+on: workflow_dispatch
 jobs:
   f5-xc-fleet-module-validate:
     runs-on: ubuntu-latest
